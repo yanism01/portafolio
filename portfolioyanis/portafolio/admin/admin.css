@@ -1,0 +1,202 @@
+/* admin.css - Estilo para el panel de administración */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@300;400;600;800&display=swap');
+
+/* Variables de color */
+:root {
+  --color-fondo: #1e2326;
+  --color-secundario: #252A2E;
+  --color-acento: #1CB698;
+  --color-texto: #fff;
+  --color-borde: rgba(28, 182, 152, 0.3);
+}
+
+/* Estilos base */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Estructura principal */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Barra lateral */
+.admin-sidebar {
+  width: 280px;
+  background-color: var(--color-secundario);
+  padding: 20px 0;
+  border-right: 1px solid var(--color-borde);
+}
+
+.admin-sidebar h2 {
+  font-family: 'Righteous', cursive;
+  color: var(--color-acento);
+  text-align: center;
+  margin: 20px 0 30px;
+  font-size: 24px;
+}
+
+.admin-nav ul {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.admin-nav li a {
+  display: flex;
+  align-items: center;
+  color: var(--color-texto);
+  text-decoration: none;
+  padding: 12px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.admin-nav li a i {
+  margin-right: 10px;
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.admin-nav li a:hover,
+.admin-nav li a.active {
+  background-color: var(--color-acento);
+  color: var(--color-fondo);
+}
+
+/* Contenido principal */
+.admin-main {
+  flex: 1;
+  padding: 30px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-title {
+  font-family: 'Righteous', cursive;
+  color: var(--color-acento);
+  font-size: 28px;
+}
+
+/* Tarjetas y widgets */
+.admin-card {
+  background-color: var(--color-secundario);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--color-acento);
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 10px;
+}
+
+/* Formularios */
+.admin-form input[type="text"],
+.admin-form input[type="password"],
+.admin-form textarea,
+.admin-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+  border-radius: 5px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid var(--color-acento);
+  color: var(--color-texto);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: var(--color-acento);
+  color: var(--color-fondo);
+}
+
+.btn:hover {
+  background-color: var(--color-acento);
+  color: var(--color-fondo);
+}
+
+/* Tablas */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.admin-table th {
+  background-color: var(--color-secundario);
+  color: var(--color-acento);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-container {
+    flex-direction: column;
+  }
+  
+  .admin-sidebar {
+    width: 100%;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--color-borde);
+  }
+  
+  .admin-main {
+    padding: 20px;
+  }
+}
+
+/* Estilos específicos para CKEditor */
+.cke_top {
+  background-color: var(--color-secundario) !important;
+  border-color: var(--color-borde) !important;
+}
+
+.cke_toolgroup {
+  background-color: var(--color-fondo) !important;
+  border: none !important;
+  margin-right: 5px !important;
+}
+
+.cke_combo_text {
+  color: var(--color-texto) !important;
+}
